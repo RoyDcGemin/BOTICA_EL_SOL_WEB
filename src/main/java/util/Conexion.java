@@ -12,17 +12,6 @@ import java.util.logging.Logger;
  * Patron usado: Singleton "simple".
  * - El constructor es privado, por lo que NO se pueden crear instancias.
  * - Se accede siempre a traves del metodo estatico getConexion().
- *
- * La BD vive en el SERVIDOR MySQL (ya no en un archivo local):
- *   - Por defecto:  jdbc:mysql://localhost:3306/elsol_db
- *                     usuario "elsol", clave "elsol123"
- *   - Se puede cambiar sin recompilar con propiedades del sistema:
- *      -Dapp.bd.url=jdbc:mysql://IP_WINDOWS:3306/elsol_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Lima
- *      -Dapp.bd.usuario=elsol
- *      -Dapp.bd.clave=elsol123
- *
- * En Tomcat las propiedades se pasan en CATALINA_OPTS o en setenv.bat:
- *   set CATALINA_OPTS=-Dapp.bd.url=jdbc:mysql://192.168.x.x:3306/elsol_db?...
  */
 public class Conexion {
 
